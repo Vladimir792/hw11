@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         // Задача 1
@@ -24,6 +26,9 @@ public class Main {
 
     // Задача 2: рекомендация версии приложения
     public static void recommendAppVersion(int osType, int deviceYear) {
+        LocalDate currentDate = LocalDate.now();
+        int currentYear = currentDate.getYear(); // Получаем текущий год
+
         String os = (osType == 0) ? "iOS" : "Android";
         String message;
 
